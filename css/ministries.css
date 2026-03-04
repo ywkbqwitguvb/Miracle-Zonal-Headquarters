@@ -1,0 +1,232 @@
+/* ========================================
+   Ministry Filters
+   ======================================== */
+.ministry-filters {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.filter-tab {
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-tab.active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+/* ========================================
+   Ministry Cards (Detailed)
+   ======================================== */
+.ministries-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ministry-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.ministry-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.ministry-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ministry-card:hover .ministry-card-image img {
+  transform: scale(1.05);
+}
+
+.ministry-card-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.ministry-card-icon.blue {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.ministry-card-icon.pink {
+  background: #ec4899;
+  color: #fff;
+}
+
+.ministry-card-icon.purple {
+  background: #8b5cf6;
+  color: #fff;
+}
+
+.ministry-card-icon.amber {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.ministry-card-icon.emerald {
+  background: #10b981;
+  color: #fff;
+}
+
+.ministry-card-content {
+  padding: 1.5rem;
+}
+
+.ministry-card-content h3 {
+  font-size: 1.25rem;
+  color: var(--brand);
+  margin-bottom: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.ministry-card:hover .ministry-card-content h3 {
+  color: var(--accent);
+}
+
+.ministry-card-content p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.ministry-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.meta-item svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.ministry-card-content .btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.ministry-card-content .btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+/* ========================================
+   CTA Section
+   ======================================== */
+.cta-section {
+  background: #fffbeb;
+}
+
+.cta-box {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-box h2 {
+  font-size: 2rem;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .ministries-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ministries-cards {
+    grid-template-columns: 1fr;
+  }
+  .filter-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+  }
+  .filter-tab {
+    flex-shrink: 0;
+  }
+  .cta-box {
+    padding: 2rem 1.5rem;
+  }
+}
