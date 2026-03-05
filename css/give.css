@@ -467,6 +467,11 @@
   color: #94a3b8;
 }
 
+/* Form Field Spaced */
+.form-field-spaced {
+  margin-top: 1rem;
+}
+
 /* Submit Button */
 .give-submit-btn {
   width: 100%;
