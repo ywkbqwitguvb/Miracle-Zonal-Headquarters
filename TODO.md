@@ -1,43 +1,49 @@
-# Hero Video Preview Component - Implementation TODO
+# Give.html Redesign Plan
 
-## Task Overview
-Design and develop a high-end, conversion-focused hero video preview component for the Miracle Zonal Headquarters website.
+## Information Gathered:
+- Current Give.html has a dark hero section with "Give Online" headline
+- Existing generosity section with form and "Other Ways to Give" 
+- CSS uses Nigerian Naira (₦) in some places but mostly uses dollars ($)
+- Design uses accent color #f59e0b (amber/gold)
+- Current structure is good but needs modern redesign per user requirements
 
-## Implementation Plan
+## Plan:
 
-### Phase 1: CSS Enhancements
-- [ ] Add glassmorphism play button styles with backdrop-filter blur
-- [ ] Implement smooth cubic-bezier transitions (0.4s)
-- [ ] Add image zoom effect on hover (scale 1.05)
-- [ ] Enhance shadow with deeper effect on hover
-- [ ] Add premium badge styling ("Watch Latest Sermon")
-- [ ] Implement focus-visible styles for accessibility
-- [ ] Ensure 16:9 aspect ratio with aspect-ratio property
+### 1. Hero Section Redesign
+- Change to inspiring background image (church worship moment)
+- New headline: "Give with Purpose"
+- Add encouraging scripture passage
+- CTA button: "Give Now"
 
-### Phase 2: HTML Updates
-- [ ] Update video thumbnail component in index.html
-- [ ] Add improved aria-labels
-- [ ] Add loading="lazy" for optimized image loading
-- [ ] Add proper semantic HTML structure
+### 2. Why We Give Section (NEW)
+- Biblical encouragement text
+- 3-column layout: Tithes, Offerings, Missions/Outreach
+- Clean icon-based cards
 
-### Phase 3: Mobile Responsiveness
-- [ ] Ensure proper stacking below hero text on mobile
-- [ ] Add appropriate spacing
-- [ ] Test breakpoints at 768px and below
+### 3. Secure Giving Form Redesign
+- Card-style form container with soft shadows
+- Amount buttons: ₦5,000 / ₦10,000 / ₦20,000 / Custom
+- Giving Type: Tithe, Offering, Building Fund, Missions
+- Name and Email fields
+- Payment Method selection
+- Security reassurance text
 
-### Phase 4: Accessibility
-- [ ] Verify meaningful alt text
-- [ ] Check keyboard navigability
-- [ ] Verify WCAG contrast guidelines
+### 4. Other Ways to Give Section
+- Bank transfer details
+- USSD code (if available)
+- In-person giving info
+- Clean card layout
 
-## Files to Modify
-- `css/style.css` - Add enhanced styles
-- `index.html` - Update hero video component
+### 5. Impact Section (NEW)
+- "Your Giving Makes a Difference" headline
+- Stats: 500+ Families, 20+ Programs, 1000+ Lives
 
-## Success Criteria
-- Video thumbnail opens YouTube in new tab on click
-- Maintains 16:9 aspect ratio
-- Smooth hover animations with glassmorphism play button
-- Fully responsive across all breakpoints
-- Accessible via keyboard navigation
-- Premium church-first aesthetic maintained
+## Dependent Files:
+- Give.html - Main file to be redesigned
+- css/style.css - May need additional styles
+
+## Followup Steps:
+1. Update HTML structure in Give.html
+2. Add any new CSS styles needed
+3. Test responsive behavior
+

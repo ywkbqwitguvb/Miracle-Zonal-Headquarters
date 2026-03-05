@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Give | Miracle Zonal Headquarter</title>
+  <meta name="description" content="Your generosity changes lives. Partner with us in kingdom work through online giving to support our church community and mission.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://miracle-zonal-headquarters.base44.app/Give">
+  <meta property="og:title" content="Give | Miracle Zonal Headquarter">
+  <meta property="og:description" content="Your generosity changes lives. Partner with us in kingdom work through online giving.">
+  <meta property="og:image" content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/6996c4aedebdf6a0b1fb7c77/b95b078c4_logo.png?width=1200&height=630&resize=contain">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://miracle-zonal-headquarters.base44.app/Give">
+  <meta property="twitter:title" content="Give | Miracle Zonal Headquarter">
+  <meta property="twitter:description" content="Your generosity changes lives. Partner with us in kingdom work.">
+  <meta property="twitter:image" content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/6996c4aedebdf6a0b1fb7c77/b95b078c4_logo.png?width=1200&height=630&resize=contain">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://miracle-zonal-headquarters.base44.app/Give">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/give.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6996c4aedebdf6a0b1fb7c77/b95b078c4_logo.png">
+  
+  <style>
+    /* ========================================
+       Give Page Specific Styles
+       ======================================== */
+    
+    /* Hero Section - Give with Purpose */
+    .give-hero {
+      position: relative;
+      min-height: 85vh;
+      padding-top: 120px;
+      padding-bottom: 4rem;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(6, 16, 37, 0.98) 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    
+    .give-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80') center/cover no-repeat;
+      opacity: 0.3;
+    }
+    
+    .give-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(6, 16, 37, 0.85) 100%);
+    }
+    
+    .give-hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .give-hero-badge {
+      display: inline-block;
+      padding: 0.5rem 1.25rem;
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    
+    .give-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    
+    .give-hero h1 span {
+      color: #fbbf24;
+    }
+    
+    .give-hero-scripture {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      font-style: italic;
+      line-height: 1.7;
+    }
+    
+    .give-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0f172a;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+    }
+    
+    .give-hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.45);
+    }
+    
+    .give-hero-cta svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+    
+    /* Why We Give Section */
+    .why-give-section {
+      background: #fff;
+      padding: 5rem 0;
+    }
+    
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+    
+    .section-intro .label {
+      color: #f59e0b;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .section-intro h2 {
+      font-size: 2.25rem;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+    
+    .section-intro p {
+      color: #64748b;
+      line-height: 1.7;
+    }
+    
+    .why-give-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    
+    .why-give-card {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+    }
+    
+    .why-give-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+      border-color: #f59e0b;
+    }
+    
+    .why-give-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+    
+    .why-give-icon svg {
+      width: 32px;
+      height: 32px;
+      color: #b45309;
+    }
+    
+    .why-give-card h3 {
+      font-size: 1.35rem;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+    
+    .why-give-card p {
+      color: #64748b;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    
+    .why-give-card .verse-ref {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      font-style: italic;
+    }
+    
+    /* Secure Giving Form Section */
+    .secure-giving-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+      padding: 5rem 0;
+    }
+    
+    .giving-form-container {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 3rem;
+      align-items: start;
+    }
+    
+    .giving-form-info h2 {
+      font-size: 2rem;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+    
+    .giving-form-info > p {
+      color: #64748b;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    
+    .giving-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .benefit-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(245, 158, 11, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .benefit-icon svg {
+      width: 20px;
+      height: 20px;
+      color: #f59e0b;
+    }
+    
+    .benefit-item h4 {
+      font-size: 1rem;
+      color: #0f172a;
+      margin-bottom: 0.25rem;
+    }
+    
+    .benefit-item p {
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+    
+    /* Form Card */
+    .giving-form-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+    
+    .giving-form-card h3 {
+      font-size: 1.5rem;
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    /* Amount Selection */
+    .form-section {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-section > label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+    
+    .amount-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    
+    .amount-btn {
+      padding: 0.875rem 1rem;
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0f172a;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .amount-btn:hover {
+      border-color: #f59e0b;
+      background: #fef3c7;
+    }
+    
+    .amount-btn.selected {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      border-color: #f59e0b;
+      color: #0f172a;
+    }
+    
+    .custom-amount-wrapper {
+      margin-top: 0.75rem;
+      position: relative;
+    }
+    
+    .custom-amount-wrapper input {
+      width: 100%;
+      padding: 0.875rem 1rem 0.875rem 2.5rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: border-color 0.2s;
+    }
+    
+    .custom-amount-wrapper input:focus {
+      outline: none;
+      border-color: #f59e0b;
+    }
+    
+    .custom-amount-wrapper .currency {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748b;
+      font-weight: 600;
+    }
+    
+    /* Giving Type */
+    .giving-type-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .giving-type-option {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1rem;
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .giving-type-option:hover {
+      border-color: #f59e0b;
+    }
+    
+    .giving-type-option.selected {
+      background: #fef3c7;
+      border-color: #f59e0b;
+    }
+    
+    .giving-type-option input {
+      display: none;
+    }
+    
+    .giving-type-radio {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #cbd5e1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    
+    .giving-type-option.selected .giving-type-radio {
+      border-color: #f59e0b;
+    }
+    
+    .giving-type-option.selected .giving-type-radio::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #f59e0b;
+      border-radius: 50%;
+    }
+    
+    .giving-type-content {
+      flex: 1;
+    }
+    
+    .giving-type-content strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+    
+    .giving-type-content small {
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+    
+    /* Personal Info */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .form-field label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+    
+    .form-field input,
+    .form-field select {
+      padding: 0.875rem 1rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+    
+    .form-field input:focus,
+    .form-field select:focus {
+      outline: none;
+      border-color: #f59e0b;
+    }
+    
+    .form-field input::placeholder {
+      color: #94a3b8;
+    }
+    
+    /* Submit Button */
+    .give-submit-btn {
+      width: 100%;
+      padding: 1.125rem 2rem;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0f172a;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .give-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+    }
+    
+    /* Security Note */
+    .security-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+    
+    .security-note svg {
+      width: 14px;
+      height: 14px;
+      color: #10b981;
+    }
+    
+    /* Other Ways to Give */
+    .other-ways-section {
+      background: #fff;
+      padding: 5rem 0;
+    }
+    
+    .other-ways-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    
+    .way-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .way-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      border-color: #f59e0b;
+    }
+    
+    .way-card-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(245, 158, 11, 0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    
+    .way-card-icon svg {
+      width: 24px;
+      height: 24px;
+      color: #f59e0b;
+    }
+    
+    .way-card h4 {
+      font-size: 1.15rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+    
+    .way-card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 1rem;
+    }
+    
+    .way-card .details {
+      background: #fff;
+      padding: 0.875rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #0f172a;
+      font-weight: 500;
+      font-family: monospace;
+    }
+    
+    /* Impact Section */
+    .impact-section {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 5rem 0;
+      color: #fff;
+    }
+    
+    .impact-section .section-intro .label {
+      color: #fbbf24;
+    }
+    
+    .impact-section .section-intro h2 {
+      color: #fff;
+    }
+    
+    .impact-section .section-intro p {
+      color: #94a3b8;
+    }
+    
+    .impact-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .impact-stat {
+      padding: 2rem;
+    }
+    
+    .impact-stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #fbbf24;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .impact-stat-label {
+      font-size: 1.15rem;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      background: #f8fafc;
+      padding: 5rem 0;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .faq-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e2e8f0;
+    }
+    
+    .faq-card h4 {
+      font-size: 1.05rem;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+    
+    .faq-card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.6;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .giving-form-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .why-give-grid,
+      .other-ways-grid,
+      .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .give-hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 4rem;
+      }
+      
+      .give-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .give-hero-scripture {
+        font-size: 1rem;
+      }
+      
+      .why-give-grid,
+      .other-ways-grid,
+      .impact-stats,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .amount-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .impact-stat-number {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <a class="brand" href="index.html">
+          <img class="logo" src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6996c4aedebdf6a0b1fb7c77/e2796ef2b_cac.jpg" alt="Miracle Zonal Headquarters Logo">
+          <span class="brand-text"><strong>Miracle Zonal</strong><small>Headquarters</small></span>
+        </a>
+      </div>
+
+      <nav class="nav" id="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#ministries" class="dropdown-toggle">Connect</a>
+            <div class="dropdown-menu">
+              <a href="Ministries.html">Ministries</a>
+              <a href="Events.html">Events</a>
+              <a href="plan-visit.html">Plan your visit</a>
+            </div>
+          </li>
+          <li><a href="Sermons.html">Sermons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="Sermons.html" class="btn-watch">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+          Watch Live
+        </a>
+        <a href="Give.html" class="btn-give">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          Give
+        </a>
+        <a href="#prayer" class="btn-pray">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"></path><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path></svg>
+          Prayer
+        </a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="give-hero">
+      <div class="give-hero-bg"></div>
+      <div class="give-hero-overlay"></div>
+      <div class="container">
+        <div class="give-hero-content">
+          <span class="give-hero-badge">💛 Partner with Us</span>
+          <h1>Give with <span>Purpose</span></h1>
+          <p class="give-hero-scripture">"Bring the whole tithe into the storehouse, that there may be food in my house. Test me now in this," says the Lord Almighty, "and see if I will not throw open the floodgates of heaven and pour out so much blessing that there will not be room enough to store it."</p>
+          <p style="color: #fbbf24; font-size: 0.9rem; margin-bottom: 1.5rem;">— Malachi 3:10</p>
+          <a href="#giving-form" class="give-hero-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            Give Now
+          </a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span>Scroll to give</span>
+      </div>
+    </section>
+
+    <!-- Why We Give Section -->
+    <section class="why-give-section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="label">Biblical Foundation</span>
+          <h2>Why We Give</h2>
+          <p>Giving is an act of worship and faith. When you give, you participate in God's work of transforming lives in our community and beyond.</p>
+        </div>
+        
+        <div class="why-give-grid">
+          <div class="why-give-card">
+            <div class="why-give-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Tithes</h3>
+            <p>The firstfruits of what God has given us. Tithing is returning to God what already belongs to Him—a thankful acknowledgment of His provision.</p>
+            <div class="verse-ref">"Bring the whole tithe into the storehouse..." — Malachi 3:10</div>
+          </div>
+          
+          <div class="why-give-card">
+            <div class="why-give-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+            </div>
+            <h3>Offerings</h3>
+            <p>Freewill gifts above and beyond the tithe. Offerings are expressions of love and generosity that support the ongoing work of ministry.</p>
+            <div class="verse-ref">"Each one must give as he has decided..." — 2 Corinthians 9:7</div>
+          </div>
+          
+          <div class="why-give-card">
+            <div class="why-give-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Missions & Outreach</h3>
+            <p>Supporting local and global mission efforts. Your giving extends the love of Christ to those who need to hear the good news.</p>
+            <div class="verse-ref">"Go and make disciples of all nations..." — Matthew 28:19</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secure Giving Form Section -->
+    <section class="secure-giving-section" id="giving-form">
+      <div class="container">
+        <div class="giving-form-container">
+          <div class="giving-form-info">
+            <h2>Secure Online Giving</h2>
+            <p>Make your donation quickly and securely. Your generosity helps us continue our mission of sharing God's love with our community.</p>
+            
+            <div class="giving-benefits">
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div>
+                  <h4>Secure & Encrypted</h4>
+                  <p>Your donation is protected with bank-level encryption</p>
+                </div>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <h4>Easy & Convenient</h4>
+                  <p>Give in seconds with our simple donation process</p>
+                </div>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
+                </div>
+                <div>
+                  <h4>Tax Deductible</h4>
+                  <p>Receive annual receipts for your records</p>
+                </div>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <h4>Set Up Recurring Giving</h4>
+                  <p>Automate your generosity with monthly or weekly gifts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="giving-form-card">
+            <h3>Complete Your Donation</h3>
+            <form class="give-form" id="donation-form">
+              <!-- Amount Selection -->
+              <div class="form-section">
+                <label>Select Amount</label>
+                <div class="amount-buttons">
+                  <button type="button" class="amount-btn" data-amount="5000">₦5,000</button>
+                  <button type="button" class="amount-btn selected" data-amount="10000">₦10,000</button>
+                  <button type="button" class="amount-btn" data-amount="20000">₦20,000</button>
+                  <button type="button" class="amount-btn" data-amount="50000">₦50,000</button>
+                  <button type="button" class="amount-btn" data-amount="100000">₦100,000</button>
+                  <button type="button" class="amount-btn" data-amount="custom">Custom</button>
+                </div>
+                <div class="custom-amount-wrapper" id="custom-amount-wrap" style="display: none;">
+                  <span class="currency">₦</span>
+                  <input type="number" id="custom-amount" placeholder="Enter amount" min="100">
+                </div>
+              </div>
+              
+              <!-- Giving Type -->
+              <div class="form-section">
+                <label>Giving Type</label>
+                <div class="giving-type-options">
+                  <label class="giving-type-option selected" data-type="tithe">
+                    <input type="radio" name="giving-type" value="tithe" checked>
+                    <span class="giving-type-radio"></span>
+                    <span class="giving-type-content">
+                      <strong>Tithe</strong>
+                      <small>Support church operations</small>
+                    </span>
+                  </label>
+                  <label class="giving-type-option" data-type="offering">
+                    <input type="radio" name="giving-type" value="offering">
+                    <span class="giving-type-radio"></span>
+                    <span class="giving-type-content">
+                      <strong>Offering</strong>
+                      <small>General offering</small>
+                    </span>
+                  </label>
+                  <label class="giving-type-option" data-type="building">
+                    <input type="radio" name="giving-type" value="building">
+                    <span class="giving-type-radio"></span>
+                    <span class="giving-type-content">
+                      <strong>Building Fund</strong>
+                      <small>Facility development</small>
+                    </span>
+                  </label>
+                  <label class="giving-type-option" data-type="missions">
+                    <input type="radio" name="giving-type" value="missions">
+                    <span class="giving-type-radio"></span>
+                    <span class="giving-type-content">
+                      <strong>Missions</strong>
+                      <small>Local & global outreach</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Personal Info -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="donor-name">Your Name</label>
+                  <input type="text" id="donor-name" name="name" placeholder="Full name" required>
+                </div>
+                <div class="form-field">
+                  <label for="donor-email">Email Address</label>
+                  <input type="email" id="donor-email" name="email" placeholder="your@email.com" required>
+                </div>
+              </div>
+              
+              <!-- Payment Method -->
+              <div class="form-field" style="margin-top: 1rem;">
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment-method" required>
+                  <option value="">Select payment method</option>
+                  <option value="card">Debit/Credit Card</option>
+                  <option value="bank">Bank Transfer</option>
+                  <option value="ussd">USSD</option>
+                </select>
+              </div>
+              
+              <!-- Submit Button -->
+              <button type="submit" class="give-submit-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Complete Donation
+              </button>
+              
+              <!-- Security Note -->
+              <div class="security-note">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Your donation is secure and encrypted
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Ways to Give -->
+    <section class="other-ways-section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="label">More Options</span>
+          <h2>Other Ways to Give</h2>
+          <p>Choose the method that works best for you to partner with us in ministry.</p>
+        </div>
+        
+        <div class="other-ways-grid">
+          <div class="way-card">
+            <div class="way-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <h4>Bank Transfer</h4>
+            <p>Make a direct transfer to our account</p>
+            <div class="details">Acct: 0123456789<br>Miracle Zonal HQ</div>
+          </div>
+          
+          <div class="way-card">
+            <div class="way-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="14" x="4" y="5" rx="2"/><line x1="4" x2="20" y1="10" y2="10"/></svg>
+            </div>
+            <h4>USSD Code</h4>
+            <p>Dial on your mobile phone</p>
+            <div class="details">*123*456*amount#</div>
+          </div>
+          
+          <div class="way-card">
+            <div class="way-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h4>In-Person</h4>
+            <p>Give during Sunday services</p>
+            <div class="details">9AM & 11AM Sundays</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="label">Your Impact</span>
+          <h2>Your Giving Makes a Difference</h2>
+          <p>See how your generous donations are transforming lives in our community.</p>
+        </div>
+        
+        <div class="impact-stats">
+          <div class="impact-stat">
+            <div class="impact-stat-number">500+</div>
+            <div class="impact-stat-label">Families Supported</div>
+          </div>
+          <div class="impact-stat">
+            <div class="impact-stat-number">20+</div>
+            <div class="impact-stat-label">Outreach Programs</div>
+          </div>
+          <div class="impact-stat">
+            <div class="impact-stat-number">1,000+</div>
+            <div class="impact-stat-label">Lives Impacted</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="label">Questions?</span>
+          <h2>Frequently Asked About Giving</h2>
+        </div>
+        
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h4>Is my donation secure?</h4>
+            <p>Yes! We use industry-standard encryption to protect your financial information. Your data is never stored on our servers.</p>
+          </div>
+          <div class="faq-card">
+            <h4>Can I set up recurring giving?</h4>
+            <p>Absolutely! You can choose to give one-time or set up recurring donations weekly, bi-weekly, or monthly.</p>
+          </div>
+          <div class="faq-card">
+            <h4>Will I receive a tax receipt?</h4>
+            <p>Yes, you'll receive an annual tax receipt for all your donations. Please ensure you provide your email address.</p>
+          </div>
+          <div class="faq-card">
+            <h4>Can I change my giving amount?</h4>
+            <p>Yes, you can modify or cancel your recurring giving at any time through your account dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6996c4aedebdf6a0b1fb7c77/e2796ef2b_cac.jpg" alt="Logo">
+            <h3>Miracle Zonal Headquarters</h3>
+          </div>
+          <p>Christ Apostolic Church — One Fold, One Shepherd. Join us for worship, community, and transformation.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Sermons.html">Sermons</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Give.html">Give</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>35 Orotayo str. Caterpillar Bus stop, Alagbado, Lagos State</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(555) 123-4567</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              <span>info@cacmiraclecentre69@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-services">
+          <h4>Service Times</h4>
+          <ul>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <p class="service-name">Sunday Morning</p>
+                <p class="service-time">9:00 AM & 11:00 AM</p>
+              </div>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <p class="service-name">Tuesday Night</p>
+                <p class="service-time">5:30pm - 7:30pm</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Miracle Zonal Headquarters — Christ Apostolic Church. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  
+  <script>
+    // Give Form Interactions
+    document.addEventListener('DOMContentLoaded', function() {
+      // Amount buttons
+      const amountBtns = document.querySelectorAll('.amount-btn');
+      const customAmountWrap = document.getElementById('custom-amount-wrap');
+      const customAmountInput = document.getElementById('custom-amount');
+      
+      amountBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove selected from all
+          amountBtns.forEach(b => b.classList.remove('selected'));
+          // Add selected to clicked
+          this.classList.add('selected');
+          
+          // Show/hide custom amount
+          if (this.dataset.amount === 'custom') {
+            customAmountWrap.style.display = 'block';
+            customAmountInput.focus();
+          } else {
+            customAmountWrap.style.display = 'none';
+            customAmountInput.value = '';
+          }
+        });
+      });
+      
+      // Giving type options
+      const givingOptions = document.querySelectorAll('.giving-type-option');
+      
+      givingOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          // Remove selected from all
+          givingOptions.forEach(o => o.classList.remove('selected'));
+          // Add selected to clicked
+          this.classList.add('selected');
+          // Check the radio
+          const radio = this.querySelector('input[type="radio"]');
+          radio.checked = true;
+        });
+      });
+      
+      // Form submission
+      const donationForm = document.getElementById('donation-form');
+      
+      donationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get selected amount
+        let selectedAmount = document.querySelector('.amount-btn.selected');
+        let amount = selectedAmount ? selectedAmount.dataset.amount : '10000';
+        
+        if (amount === 'custom') {
+          amount = customAmountInput.value || '10000';
+        }
+        
+        // Get giving type
+        const givingType = document.querySelector('input[name="giving-type"]:checked').value;
+        
+        // Get personal info
+        const name = document.getElementById('donor-name').value;
+        const email = document.getElementById('donor-email').value;
+        
+        // Get payment method
+        const paymentMethod = document.getElementById('payment-method').value;
+        
+        // Simple alert for demo
+        alert(`Thank you for your generous donation of ₦${parseInt(amount).toLocaleString()}!\n\nType: ${givingType}\nName: ${name}\nPayment: ${paymentMethod}\n\nYou will receive a confirmation email at ${email}`);
+      });
+      
+      // Smooth scroll for Give Now button
+      const giveNowBtn = document.querySelector('.give-hero-cta');
+      if (giveNowBtn) {
+        giveNowBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.getElementById('giving-form');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+

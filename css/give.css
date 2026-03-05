@@ -1,0 +1,704 @@
+/* ========================================
+   Give Page Specific Styles
+   ======================================== */
+
+/* Hero Section - Give with Purpose */
+.give-hero {
+  position: relative;
+  min-height: 85vh;
+  padding-top: 120px;
+  padding-bottom: 4rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(6, 16, 37, 0.98) 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.give-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80') center/cover no-repeat;
+  opacity: 0.3;
+}
+
+.give-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(6, 16, 37, 0.85) 100%);
+}
+
+.give-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.give-hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.give-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.give-hero h1 span {
+  color: #fbbf24;
+}
+
+.give-hero-scripture {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.scripture-ref {
+  color: #fbbf24;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.give-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #0f172a;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+}
+
+.give-hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.45);
+}
+
+.give-hero-cta svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* Why We Give Section */
+.why-give-section {
+  background: #fff;
+  padding: 5rem 0;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.section-intro .label {
+  color: #f59e0b;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.section-intro h2 {
+  font-size: 2.25rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.section-intro p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.why-give-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.why-give-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.why-give-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  border-color: #f59e0b;
+}
+
+.why-give-icon {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.why-give-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #b45309;
+}
+
+.why-give-card h3 {
+  font-size: 1.35rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.why-give-card p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.why-give-card .verse-ref {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Secure Giving Form Section */
+.secure-giving-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+  padding: 5rem 0;
+}
+
+.giving-form-container {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.giving-form-info h2 {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.giving-form-info > p {
+  color: #64748b;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.giving-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.benefit-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-icon svg {
+  width: 20px;
+  height: 20px;
+  color: #f59e0b;
+}
+
+.benefit-item h4 {
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.benefit-item p {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* Form Card */
+.giving-form-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.giving-form-card h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Amount Selection */
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+.form-section > label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.amount-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.amount-btn {
+  padding: 0.875rem 1rem;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.amount-btn:hover {
+  border-color: #f59e0b;
+  background: #fef3c7;
+}
+
+.amount-btn.selected {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border-color: #f59e0b;
+  color: #0f172a;
+}
+
+.custom-amount-wrapper {
+  margin-top: 0.75rem;
+  position: relative;
+}
+
+.custom-amount-wrapper input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: border-color 0.2s;
+}
+
+.custom-amount-wrapper input:focus {
+  outline: none;
+  border-color: #f59e0b;
+}
+
+.custom-amount-wrapper .currency {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Giving Type */
+.giving-type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.giving-type-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.giving-type-option:hover {
+  border-color: #f59e0b;
+}
+
+.giving-type-option.selected {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+.giving-type-option input {
+  display: none;
+}
+
+.giving-type-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.giving-type-option.selected .giving-type-radio {
+  border-color: #f59e0b;
+}
+
+.giving-type-option.selected .giving-type-radio::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #f59e0b;
+  border-radius: 50%;
+}
+
+.giving-type-content {
+  flex: 1;
+}
+
+.giving-type-content strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.giving-type-content small {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Personal Info */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.form-field input,
+.form-field select {
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: #f59e0b;
+}
+
+.form-field input::placeholder {
+  color: #94a3b8;
+}
+
+/* Submit Button */
+.give-submit-btn {
+  width: 100%;
+  padding: 1.125rem 2rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #0f172a;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.give-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+/* Security Note */
+.security-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.security-note svg {
+  width: 14px;
+  height: 14px;
+  color: #10b981;
+}
+
+/* Other Ways to Give */
+.other-ways-section {
+  background: #fff;
+  padding: 5rem 0;
+}
+
+.other-ways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.way-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.way-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border-color: #f59e0b;
+}
+
+.way-card-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.way-card-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #f59e0b;
+}
+
+.way-card h4 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.way-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.way-card .details {
+  background: #fff;
+  padding: 0.875rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #0f172a;
+  font-weight: 500;
+  font-family: monospace;
+}
+
+/* Impact Section */
+.impact-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 5rem 0;
+  color: #fff;
+}
+
+.impact-section .section-intro .label {
+  color: #fbbf24;
+}
+
+.impact-section .section-intro h2 {
+  color: #fff;
+}
+
+.impact-section .section-intro p {
+  color: #94a3b8;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.impact-stat {
+  padding: 2rem;
+}
+
+.impact-stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fbbf24;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.impact-stat-label {
+  font-size: 1.15rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: #f8fafc;
+  padding: 5rem 0;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.faq-card h4 {
+  font-size: 1.05rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.faq-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .giving-form-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .why-give-grid,
+  .other-ways-grid,
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .give-hero {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 4rem;
+  }
+  
+  .give-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .give-hero-scripture {
+    font-size: 1rem;
+  }
+  
+  .why-give-grid,
+  .other-ways-grid,
+  .impact-stats,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .amount-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .impact-stat-number {
+    font-size: 2.5rem;
+  }
+}
+

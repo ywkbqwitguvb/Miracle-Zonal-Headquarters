@@ -262,6 +262,7 @@
 }
 
 .sermon-card {
+  display: block;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
@@ -269,6 +270,8 @@
   border: 1px solid #e2e8f0;
   transition: all 0.3s;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .sermon-card:hover {
