@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Paystack handler
   function initializePayment(formData, amountKobo) {
     const handler = PaystackPop.setup({
-      key: 'pk_test_your_placeholder_key_here', // Replace with real public key
+      key: 'pk_test_10ddc3f80818d770d0878f03f5c0adcf20a9c8f7', // Replace with real public key
       email: formData.email,
       amount: amountKobo,
       currency: 'NGN',
