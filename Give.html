@@ -27,9 +27,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Stylesheets -->
+<!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/give.css">
+  <!-- Paystack -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6996c4aedebdf6a0b1fb7c77/b95b078c4_logo.png">
@@ -93,7 +95,7 @@
           <h1>Give with <span>Purpose</span></h1>
           <p class="give-hero-scripture">"Bring the whole tithe into the storehouse, that there may be food in my house. Test me now in this," says the Lord Almighty, "and see if I will not throw open the floodgates of heaven and pour out so much blessing that there will not be room enough to store it."</p>
           <p class="scripture-ref">— Malachi 3:10</p>
-          <a href="#giving-form" class="give-hero-cta">
+          <a href="#donate-section" class="give-hero-cta">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
             Give Now
           </a>
@@ -145,151 +147,77 @@
       </div>
     </section>
 
-    <!-- Secure Giving Form Section -->
-    <section class="secure-giving-section" id="giving-form">
+    <!-- Modern Donate Section -->
+    <section class="donate-section" id="donate-section">
       <div class="container">
-        <div class="giving-form-container">
-          <div class="giving-form-info">
-            <h2>Secure Online Giving</h2>
-            <p>Make your donation quickly and securely. Your generosity helps us continue our mission of sharing God's love with our community.</p>
+        <div class="donate-grid">
+          <!-- Info Side -->
+          <div class="donate-info">
+            <h2>Give / Donate</h2>
+            <p class="donate-message">Your generosity supports our ministry and spreads God's love. Every gift, no matter the size, makes a lasting impact in our community and beyond.</p>
             
-            <div class="giving-benefits">
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                </div>
-                <div>
-                  <h4>Secure & Encrypted</h4>
-                  <p>Your donation is protected with bank-level encryption</p>
-                </div>
+            <blockquote class="scripture-testimonial">
+              <p>"Give, and it will be given to you. Good measure, pressed down, shaken together, running over, will be put into your lap."</p>
+              <cite>— Luke 6:38</cite>
+            </blockquote>
+            
+            <div class="secure-badges">
+              <div class="secure-badge">
+                <svg class="lock-icon" viewBox="0 0 24 24"><path fill="#10b981" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>SSL Secured</span>
               </div>
-              
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <div>
-                  <h4>Easy & Convenient</h4>
-                  <p>Give in seconds with our simple donation process</p>
-                </div>
-              </div>
-              
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
-                </div>
-                <div>
-                  <h4>Tax Deductible</h4>
-                  <p>Receive annual receipts for your records</p>
-                </div>
-              </div>
-              
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <div>
-                  <h4>Set Up Recurring Giving</h4>
-                  <p>Automate your generosity with monthly or weekly gifts</p>
-                </div>
+              <div class="paystack-badge">
+                <svg class="paystack-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#00D9A5"/><path fill="#fff" d="M8 9h8v6H8z"/></svg>
+                <span>Powered by Paystack</span>
               </div>
             </div>
+            <p class="secure-message">Secure payments powered by Paystack • Bank-level encryption</p>
           </div>
           
-          <div class="giving-form-card">
-            <h3>Complete Your Donation</h3>
-            <form class="give-form" id="donation-form" >
-              <!-- Amount Selection -->
-              <div class="form-section">
-                <label>Select Amount</label>
-                <div class="amount-buttons">
-                  <button type="button" class="amount-btn" data-amount="5000">₦5,000</button>
-                  <button type="button" class="amount-btn selected" data-amount="10000">₦10,000</button>
-                  <button type="button" class="amount-btn" data-amount="20000">₦20,000</button>
-                  <button type="button" class="amount-btn" data-amount="50000">₦50,000</button>
-                  <button type="button" class="amount-btn" data-amount="100000">₦100,000</button>
-                  <button type="button" class="amount-btn" data-amount="custom">Custom</button>
+          <!-- Form Side -->
+          <div class="donate-form-card">
+            <form class="donate-form" id="donate-form">
+              <div class="form-group">
+                <label for="donor-name">Full Name</label>
+                <input type="text" id="donor-name" name="name" placeholder="Enter your full name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="donor-email">Email Address</label>
+                <input type="email" id="donor-email" name="email" placeholder="your@email.com" required>
+              </div>
+              
+              <div class="form-group amount-section">
+                <label>Donation Amount</label>
+                <div class="preset-buttons">
+                  <button type="button" class="preset-btn" data-amount="1000">₦1,000</button>
+                  <button type="button" class="preset-btn active" data-amount="5000">₦5,000</button>
+                  <button type="button" class="preset-btn" data-amount="10000">₦10,000</button>
+                  <button type="button" class="preset-btn" data-amount="20000">₦20,000</button>
                 </div>
-                <div class="custom-amount-wrapper" id="custom-amount-wrap" style="display: none;">
+                <div class="custom-amount-group">
                   <span class="currency">₦</span>
-                  <input type="number" id="custom-amount" placeholder="Enter amount" min="100">
+                  <input type="number" id="custom-amount" placeholder="Custom amount" min="100" step="100">
                 </div>
               </div>
               
-              <!-- Giving Type -->
-              <div class="form-section">
-                <label>Giving Type</label>
-                <div class="giving-type-options">
-                  <label class="giving-type-option selected" data-type="tithe">
-                    <input type="radio" name="giving-type" value="tithe" checked>
-                    <span class="giving-type-radio"></span>
-                    <span class="giving-type-content">
-                      <strong>Tithe</strong>
-                      <small>Support church operations</small>
-                    </span>
-                  </label>
-                  <label class="giving-type-option" data-type="offering">
-                    <input type="radio" name="giving-type" value="offering">
-                    <span class="giving-type-radio"></span>
-                    <span class="giving-type-content">
-                      <strong>Offering</strong>
-                      <small>General offering</small>
-                    </span>
-                  </label>
-                  <label class="giving-type-option" data-type="building">
-                    <input type="radio" name="giving-type" value="building">
-                    <span class="giving-type-radio"></span>
-                    <span class="giving-type-content">
-                      <strong>Building Fund</strong>
-                      <small>Facility development</small>
-                    </span>
-                  </label>
-                  <label class="giving-type-option" data-type="missions">
-                    <input type="radio" name="giving-type" value="missions">
-                    <span class="giving-type-radio"></span>
-                    <span class="giving-type-content">
-                      <strong>Missions</strong>
-                      <small>Local & global outreach</small>
-                    </span>
-                  </label>
-                </div>
-              </div>
-              
-              <!-- Personal Info -->
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="donor-name">Your Name</label>
-                  <input type="text" id="donor-name" name="name" placeholder="Full name" required>
-                </div>
-                <div class="form-field">
-                  <label for="donor-email">Email Address</label>
-                  <input type="email" id="donor-email" name="email" placeholder="your@email.com" required>
-                </div>
-              </div>
-              
-              <!-- Payment Method -->
-              <div class="form-field form-field-spaced">
-                <label for="payment-method">Payment Method</label>
-                <select id="payment-method" name="payment-method" required>
-                  <option value="">Select payment method</option>
-                  <option value="card">Debit/Credit Card</option>
-                  <option value="bank">Bank Transfer</option>
-                  <option value="ussd">USSD</option>
-                </select>
-              </div>
-              
-              <!-- Submit Button -->
-              <button type="submit" class="give-submit-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                Complete Donation
+              <button type="submit" class="donate-now-btn">
+                Donate Now
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
               </button>
-              
-              <!-- Security Note -->
-              <div class="security-note">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Your donation is secure and encrypted
-              </div>
             </form>
+            
+            <!-- Success Message -->
+            <div id="payment-success" class="success-message" style="display: none;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 15L12 19l6-6"/>
+              </svg>
+              <h3>Thank You!</h3>
+              <p>Payment successful. Your generosity will make a difference. You will receive a confirmation email shortly.</p>
+            </div>
           </div>
         </div>
       </div>

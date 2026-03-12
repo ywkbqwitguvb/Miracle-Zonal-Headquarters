@@ -1,15 +1,22 @@
-# TODO - Prayer Page CSS Refactor
+# TODO: Implement Modern Donate Section with Paystack
 
-## Task
-Recode prayer.html by extracting inline CSS to external css/prayer.css file
+## ✅ 1. Create TODO.md (Done)
 
-## Steps
-- [x] 1. Analyze prayer.html and understand the inline CSS structure
-- [x] 2. Create a plan for the refactoring
-- [x] 3. Create css/prayer.css with extracted styles (animations + toast styles)
-- [x] 4. Update prayer.html to link to external CSS and remove inline styles
-- [ ] 5. Test the prayer page loads correctly
+## ✅ 2. Update Give.html
+- Add Paystack script to head
+- Replace .secure-giving-section with new donate section (heading, message, presets, form, success div, icons/scripture)
 
-## Status
-Completed - CSS extracted to external file
+## ✅ 3. Update css/give.css
+- Add styles for .donate-section, form elements, hovers, responsive
+
+## ✅ 4. Update js/main.js
+- Add Paystack handler, form interactions, preset buttons
+
+## ⏳ 5. Test implementation
+- Open Give.html in browser
+- Verify responsive design
+- Test form/Paystack popup (with placeholder key)
+
+## ⏳ 6. attempt_completion
+
 

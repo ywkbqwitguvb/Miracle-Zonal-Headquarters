@@ -134,4 +134,69 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // Paystack Donate Form
+  const donateForm = document.getElementById('donate-form');
+  const presetBtns = document.querySelectorAll('.preset-btn');
+  const customAmountInput = document.getElementById('custom-amount');
+  let currentAmount = 5000; // Default
+
+  // Preset button handlers
+  presetBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      presetBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentAmount = parseInt(this.dataset.amount);
+      customAmountInput.value = '';
+    });
+  });
+
+  // Custom amount change
+  customAmountInput.addEventListener('input', function() {
+    if (this.value) {
+      currentAmount = parseInt(this.value);
+      presetBtns.forEach(b => b.classList.remove('active'));
+    }
+  });
+
+  // Paystack handler
+  function initializePayment(formData, amountKobo) {
+    const handler = PaystackPop.setup({
+      key: 'pk_test_your_placeholder_key_here', // Replace with real public key
+      email: formData.email,
+      amount: amountKobo,
+      currency: 'NGN',
+      ref: 'MZH' + Math.floor((Math.random() * 1000000000) + 1),
+      callback: function(response) {
+        // Success - show message
+        document.getElementById('payment-success').style.display = 'block';
+        document.querySelector('.donate-form-card form').style.display = 'none';
+        alert('Thank you for your donation! Reference: ' + response.reference);
+      },
+      onClose: function() {
+        alert('Payment cancelled. You can try again.');
+      }
+    });
+    handler.openIframe();
+  }
+
+  // Form submit
+  if (donateForm) {
+    donateForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = {
+        name: document.getElementById('donor-name').value,
+        email: document.getElementById('donor-email').value
+      };
+
+      if (!formData.name || !formData.email || currentAmount < 100) {
+        alert('Please fill all fields and select a valid amount.');
+        return;
+      }
+
+      const amountKobo = currentAmount * 100;
+      initializePayment(formData, amountKobo);
+    });
+  }
 });
